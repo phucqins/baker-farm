@@ -5,7 +5,7 @@
 // Tablet
 @media (min-width: 740px) and (max-width: 1023px) {
   .header .section-content {
-    top: 35%;
+    top: 20rem;
   }
   .main-container .dishes-container {
     margin-top: 0rem;
@@ -43,9 +43,41 @@
     padding-bottom: 1.9rem;
     border-bottom: 1px solid rgba(0, 0, 0, 0.3);
   }
+  .main-container .event-section {
+    .event__card {
+      .event__date-day {font-size: 2.5rem !important;
+      
+      }
+      .event__date-month {
+        font-size: 0.7rem !important;
+      }
+    }
+    .event__heading {
+      font-size: 0.7rem !important;
+    }
+    .event__detail {
+      font-size: 0.8rem !important;
+    }
+    h2{
+        font-size: 2rem !important;
+    }
+  }
 }
 // Mobile
-@media (max-width: 739px) {
+@media only screen and (max-width: 739px) {
+  @keyframes fadeIn {
+    0% {
+      transform: scale(0.5);
+      opacity: 0;
+    }
+    80% {
+      transform: scale(1.1);
+    }
+    100% {
+      transform: scale(1);
+      opacity: 1;
+    }
+  }
   .active {
     display: flex !important;
   }
@@ -58,7 +90,9 @@
       margin-bottom: 1rem !important;
     }
   }
-
+  .header .section-content {
+    top: 20rem !important;
+  }
   .header .navbar .nav-list {
     flex-direction: column;
     list-style-type: none;
@@ -66,6 +100,7 @@
     align-items: center;
     flex-grow: 888;
     display: none;
+    animation: 0.8s fadeIn ease;
   }
   .header .navbar .nav-list li:not(:last-child) {
     margin-right: 0rem;
@@ -97,8 +132,31 @@
       }
     }
   }
-  .video-section .video__box {
-    padding: 0 !important;
+ 
+  .main-container .event-section {
+    .event__card {
+      .event__date-day {font-size: 2.5rem !important;
+      
+      }
+      .event__date-month {
+        font-size: 0.7rem !important;
+      }
+    }
+    .event__heading {
+      font-size: 0.7rem !important;
+    }
+    .event__detail {
+      font-size: 0.8rem !important;
+    }
+    .heading-2 {
+        font-size: 1.5rem !important;
+    }
+  }
+  .video-section {
+    padding: 11rem 0 !important;
+    .video__box {
+      padding: 0 !important;
+    }
   }
   .event-section {
     grid-template-columns: repeat(auto-fit, minmax(21rem, 1fr)) !important;
@@ -112,10 +170,73 @@
   .main-container .contact-section .contact__box .contact__img {
     height: 14rem;
     width: -webkit-fill-available !important;
-}
+  }
   .event__card:nth-child(2),
   .feature__card:first-child {
     padding-bottom: 1.9rem;
     border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .mb-hg {
+    margin-bottom: 1rem !important;
+  }
+  .mymodal .modal__box .heading-1 {
+    line-height: 1.8rem;
+    font-size: 2.5rem;
+  }
+  .main-container .event-section .event__card {
+    grid-column-gap: 0.5rem;
+    grid-row-gap: 0.8rem;
+  }
+  .main-container .event-section {
+    padding: 2rem;
+  }
+  .main-container .feature-container .feature-cards {
+    -ms-grid-columns: (minmax(20rem, 0.6fr)) [auto-fit] !important;
+    grid-template-columns: repeat(auto-fit, minmax(18rem, 0.6fr)) !important;
+  }
+
+  .main-container .offer-cont h1 {
+    font-size: 2.6rem;
+  }
+  .header .section-content .heading-1 {
+    font-size: 2.6rem;
+  }
+  .header .section-content .heading-2 {
+    width: 100%;
+    font-size: 1.1rem;
+    padding: 1.3rem 3rem;
+  }
+  .nav-list {
+    font-size: 0.7rem !important;
+  }
+  .event-section {
+    -ms-grid-columns: (minmax(21rem, 1fr)) [auto-fit] !important;
+    grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr)) !important;
+  }
+}
+@media only screen and (max-width: 320px) {
+  .header .section-content {
+    top: 50% !important;
+  }
+}
+@media only screen and (max-width: 280px) {
+  .main-container .feature-container .feature-cards {
+    -ms-grid-columns: minmax(20rem, 0.6fr) [auto-fit] !important;
+    grid-template-columns: repeat(auto-fit, minmax(15rem, 0.6fr)) !important;
+  }
+ 
+
+  .event-section {
+    -ms-grid-columns: minmax(14rem, 1fr) [auto-fit] !important;
+    grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr)) !important;
+  }
+  .main-container .event-section {
+    padding: 0;
+  }
+  .main-container .contact-section .contact__box .contact__info {
+    padding: 0.5rem;
   }
 }

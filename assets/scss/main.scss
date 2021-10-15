@@ -635,6 +635,7 @@
     box-shadow: 0 0.5rem 0.5rem rgba(0, 0, 0, 0.05);
     padding: 2.5rem;
     width: 80%;
+    height: fit-content;
 
     .event__title {
       grid-column: 1/-1;
@@ -665,7 +666,7 @@
         text-transform: uppercase;
         align-items: center;
         .event__date-day {
-          font-size: 2.7rem;
+          font-size: 2.9rem !important;
           color: #e9304f;
           font-weight: 700;
           line-height: 2.2rem;
@@ -678,11 +679,11 @@
           color: #e9304f;
           margin-bottom: 0;
           font-weight: 800;
-          font-size: 0.7rem;
+          font-size: 0.9rem !important;
         }
       }
       .event__heading {
-        font-size: 0.7rem;
+        font-size: 0.9rem !important;
         text-transform: uppercase;
         color: #e9304f;
         font-weight: 800;
@@ -693,11 +694,11 @@
       .event__detail {
         grid-column: 2/4;
         color: #838383;
-        font-size: 0.6rem;
+        font-size: 0.8rem !important;
       }
       .event__btn:link,
       .event__btn:visited {
-        font-size: 0.8rem;
+        font-size: 0.8rem !important;
         color: #333;
         text-transform: uppercase;
         font-weight: 800;
@@ -712,7 +713,7 @@
     }
 
     .heading-2 {
-      font-size: 1.2rem;
+      font-size: 2.2rem !important;
       font-family: "Raleway", sans-serif;
       letter-spacing: 1.6px;
       font-weight: 400;
